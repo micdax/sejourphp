@@ -2502,7 +2502,7 @@ body.front-menu-is-open { overflow: hidden; }
 .reveal-up.is-reveal-ready,
 .scroll-up.is-reveal-ready {
     opacity: 0;
-    transform: translate3d(95px, 0px, 0);
+    transform: translate3d(0px, 95px, 0);
     transition:
         opacity .85s ease,
         transform .95s cubic-bezier(.2,.72,.25,1);
