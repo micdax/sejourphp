@@ -20,7 +20,7 @@
                 </div>
             </section>
 
-            <section class="exemple2-trips-section {__popular_trips_class}">
+            <section class="exemple2-trips-section {__popular_trips_class} reveal-up">
                 <div class="container">
                     <header class="exemple2-section-heading">
                         <div class="exemple2-section-title front-rich-text writer">{_populaires_titre}</div>
