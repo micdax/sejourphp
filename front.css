@@ -2071,8 +2071,7 @@ body.front-menu-is-open { overflow: hidden; }
     line-height: 1.05;
 }
 
-.front-photo-overlay-title h2 {color:white} 
-
+.front-photo-overlay-title h2 {color:white}
 .front-photo-overlay-subtitle {
     display: block;
     max-width: 660px;
@@ -2495,6 +2494,34 @@ body.front-menu-is-open { overflow: hidden; }
 .front-detail-page [data-lightbox-item].has-expand-indicator > .photo-expand-indicator { display: flex; }
 .photo-expand-indicator svg { display: block; width: 24px; height: 24px; stroke-width: 1.4; }
 .front-toast { cursor: pointer; }
+
+/*
+ * Apparition verticale réutilisable. La classe `is-reveal-ready` est ajoutée
+ * par JavaScript afin que le contenu reste visible si les scripts sont coupés.
+ */
+.reveal-up.is-reveal-ready,
+.scroll-up.is-reveal-ready {
+    opacity: 0;
+    transform: translate3d(0, 54px, 0);
+    transition:
+        opacity .85s ease,
+        transform .95s cubic-bezier(.2,.72,.25,1);
+    will-change: opacity, transform;
+}
+.reveal-up.is-reveal-ready.is-revealed,
+.scroll-up.is-reveal-ready.is-revealed {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal-up.is-reveal-ready,
+    .scroll-up.is-reveal-ready {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
 
 @media screen and (max-width: 991px) {
     .detail-sidebar { position: static; margin-top: 30px; }
