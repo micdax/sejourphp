@@ -45,12 +45,12 @@
                         <div class="exemple2-text-slider-track" data-exemple2-slider-track>
                             <!-- BEGIN exemple2_feedback -->
                             <article class="exemple2-text-slide exemple2-feedback-slide">
-                                <p class="exemple2-feedback-meta">
+                                <p class="exemple2-feedback-meta writer">
                                     <strong>{exemple2_feedback.TITRE}</strong>
                                     <span class="{exemple2_feedback.SOUS_TITRE_CLASS}">{exemple2_feedback.SOUS_TITRE}</span>
                                     <span class="{exemple2_feedback.INFORMATION_CLASS}">{exemple2_feedback.INFORMATION}</span>
                                 </p>
-                                <div class="exemple2-feedback-description front-rich-text {exemple2_feedback.DESCRIPTIF_CLASS}">{exemple2_feedback.DESCRIPTIF}</div>
+                                <div class="exemple2-feedback-description front-rich-text {exemple2_feedback.DESCRIPTIF_CLASS} writer">{exemple2_feedback.DESCRIPTIF}</div>
                                 <a class="exemple2-text-link" href="{exemple2_feedback.URL}">{exemple2_feedback.BOUTON}</a>
                             </article>
                             <!-- END exemple2_feedback -->
@@ -63,7 +63,7 @@
             <section class="exemple2-editorial-section exemple2-faq-section">
                 <div class="container">
                     <header class="exemple2-section-heading">
-                        <div class="exemple2-section-title front-rich-text">{_faq_titre}</div>
+                        <div class="exemple2-section-title front-rich-text writer">{_faq_titre}</div>
                         <a class="exemple2-heading-link" href="{__faq_section_url}">{_faq_bouton}</a>
                     </header>
                     <div class="exemple2-slider exemple2-text-slider" data-exemple2-slider>
@@ -85,7 +85,7 @@
             <section class="exemple2-editorial-section exemple2-news-section">
                 <div class="container">
                     <header class="exemple2-section-heading">
-                        <div class="exemple2-section-title front-rich-text">{_news_titre}</div>
+                        <div class="exemple2-section-title front-rich-text writer">{_news_titre}</div>
                         <a class="exemple2-heading-link" href="{__news_section_url}">{_news_bouton}</a>
                     </header>
                     <div class="exemple2-slider" data-exemple2-slider>
