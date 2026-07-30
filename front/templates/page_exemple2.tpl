@@ -37,7 +37,7 @@
             <section class="exemple2-editorial-section exemple2-feedback-section">
                 <div class="container">
                     <header class="exemple2-section-heading">
-                        <div class="exemple2-section-title front-rich-text">{_feedback_titre}</div>
+                        <div class="exemple2-section-title front-rich-text writer">{_feedback_titre}</div>
                         <a class="exemple2-heading-link" href="{__feedback_section_url}">{_feedback_bouton}</a>
                     </header>
                     <div class="exemple2-slider exemple2-text-slider" data-exemple2-slider>
@@ -45,7 +45,7 @@
                         <div class="exemple2-text-slider-track" data-exemple2-slider-track>
                             <!-- BEGIN exemple2_feedback -->
                             <article class="exemple2-text-slide exemple2-feedback-slide">
-                                <p class="exemple2-feedback-meta writer">
+                                <p class="exemple2-feedback-meta">
                                     <strong>{exemple2_feedback.TITRE}</strong>
                                     <span class="{exemple2_feedback.SOUS_TITRE_CLASS}">{exemple2_feedback.SOUS_TITRE}</span>
                                     <span class="{exemple2_feedback.INFORMATION_CLASS}">{exemple2_feedback.INFORMATION}</span>
