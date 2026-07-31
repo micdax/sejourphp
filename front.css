@@ -604,9 +604,9 @@ body.front-menu-is-open { overflow: hidden; }
     margin: 0 0 15px;
     color: #fff;
     font-family: var(--front-font-title);
-    font-size: 21px;
+    font-size: 36px;
     font-weight: 700;
-    line-height: 1.25;
+    line-height: 1;
     text-shadow: 0 1px 3px rgba(0, 0, 0, .35);
 }
 .front-package .package-content-wrap {
@@ -2496,35 +2496,35 @@ body.front-menu-is-open { overflow: hidden; }
 .front-toast { cursor: pointer; }
 
 /*
- * Apparition verticale réutilisable. La classe `is-reveal-ready` est ajoutée
- * par JavaScript afin que le contenu reste visible si les scripts sont coupés.
+ * Apparitions directionnelles cumulables. Les axes X et Y sont indépendants:
+ * `reveal-left reveal-up` arrive donc depuis le bas-gauche.
+ * `is-reveal-ready` est ajouté par JavaScript afin que le contenu reste
+ * visible lorsque les scripts sont coupés.
  */
 .reveal-up.is-reveal-ready,
-.scroll-up.is-reveal-ready {
-    opacity: 0;
-    transform: translate3d(0px, 140px, 0);
-    transition:
-        opacity .85s ease,
-        transform .95s cubic-bezier(.2,.72,.25,1);
-    will-change: opacity, transform;
-}
+.scroll-up.is-reveal-ready,
 .reveal-left.is-reveal-ready,
-.scroll-left.is-reveal-ready {
-    opacity: 0;
-    transform: translate3d(-180px, 0, 0);
-    transition:
-        opacity .85s ease,
-        transform .95s cubic-bezier(.2,.72,.25,1);
-    will-change: opacity, transform;
-}
+.scroll-left.is-reveal-ready,
 .reveal-right.is-reveal-ready,
 .scroll-right.is-reveal-ready {
     opacity: 0;
-    transform: translate3d(180px, 0, 0);
+    transform: translate3d(var(--reveal-x, 0), var(--reveal-y, 0), 0);
     transition:
         opacity .85s ease,
         transform .95s cubic-bezier(.2,.72,.25,1);
     will-change: opacity, transform;
+}
+.reveal-up.is-reveal-ready,
+.scroll-up.is-reveal-ready {
+    --reveal-y: 140px;
+}
+.reveal-left.is-reveal-ready,
+.scroll-left.is-reveal-ready {
+    --reveal-x: -180px;
+}
+.reveal-right.is-reveal-ready,
+.scroll-right.is-reveal-ready {
+    --reveal-x: 180px;
 }
 .reveal-up.is-reveal-ready.is-revealed,
 .scroll-up.is-reveal-ready.is-revealed,
