@@ -60,7 +60,7 @@
                 </div>
             </section>
 
-            <section class="exemple2-editorial-section exemple2-faq-section">
+            <section class="exemple2-editorial-section exemple2-faq-section reveal-right">
                 <div class="container">
                     <header class="exemple2-section-heading">
                         <div class="exemple2-section-title front-rich-text writer">{_faq_titre}</div>
