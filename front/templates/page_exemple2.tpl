@@ -20,7 +20,7 @@
                 </div>
             </section>
 
-            <section class="exemple2-trips-section {__popular_trips_class} reveal-right">
+            <section class="exemple2-trips-section {__popular_trips_class} reveal-right  reveal-up">
                 <div class="container">
                     <header class="exemple2-section-heading">
                         <div class="exemple2-section-title front-rich-text writer">{_populaires_titre}</div>
@@ -34,7 +34,7 @@
 
 {_foto_full}
 
-            <section class="exemple2-editorial-section exemple2-feedback-section reveal-left">
+            <section class="exemple2-editorial-section exemple2-feedback-section reveal-left  reveal-up">
                 <div class="container">
                     <header class="exemple2-section-heading">
                         <div class="exemple2-section-title front-rich-text writer">{_feedback_titre}</div>
@@ -60,7 +60,7 @@
                 </div>
             </section>
 
-            <section class="exemple2-editorial-section exemple2-faq-section reveal-right">
+            <section class="exemple2-editorial-section exemple2-faq-section reveal-right  reveal-up">
                 <div class="container">
                     <header class="exemple2-section-heading">
                         <div class="exemple2-section-title front-rich-text writer">{_faq_titre}</div>
