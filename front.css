@@ -604,9 +604,9 @@ body.front-menu-is-open { overflow: hidden; }
     margin: 0 0 15px;
     color: #fff;
     font-family: var(--front-font-title);
-    font-size: 36px;
+    font-size: 21px;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.25;
     text-shadow: 0 1px 3px rgba(0, 0, 0, .35);
 }
 .front-package .package-content-wrap {
@@ -1844,7 +1844,8 @@ body.front-menu-is-open { overflow: hidden; }
 .trip-gallery-mosaic-main > a,
 .trip-gallery-mosaic-secondary > a { width: 100%; height: 100%; }
 .trip-gallery-mosaic img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.trip-gallery-lightbox-only { display: none; }
+.trip-gallery-lightbox-only,
+.trip-gallery-lightbox-only-item { display: none !important; }
 .trip-gallery-more {
     position: absolute;
     z-index: 7;
@@ -1922,6 +1923,33 @@ body.front-menu-is-open { overflow: hidden; }
     text-decoration: none;
 }
 .detail-island-discovery a:hover { color: var(--front-primary-dark); background: #eaf5f7; }
+.detail-recent-trips {
+    display: grid;
+    margin-top: 26px;
+    gap: 0;
+}
+.detail-recent-trips h2 {
+    margin: 0 0 11px;
+    color: var(--front-ink);
+    font-size: calc(18px * var(--front-reader-scale));
+}
+.detail-recent-trips a {
+    display: flex;
+    min-width: 0;
+    padding: 10px 4px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-top: 1px solid #dce3e4;
+    color: var(--front-secondary);
+    font-size: calc(13px * var(--front-reader-scale));
+    font-weight: 700;
+    line-height: 1.35;
+    text-decoration: none;
+}
+.detail-recent-trips a span { min-width: 0; }
+.detail-recent-trips a i { flex: 0 0 auto; color: var(--front-primary-dark); }
+.detail-recent-trips a:hover { color: var(--front-primary-dark); }
 
 /* Lecture des actualités: article principal large et voisinage chronologique. */
 .front-news-content { padding-top: var(--front-fixed-header-height); }
@@ -2536,6 +2564,67 @@ body.front-menu-is-open { overflow: hidden; }
     transform: translate3d(0, 0, 0);
 }
 
+/* Invitation discrète à poursuivre le défilement avant chaque journée. */
+.itinerary-timeline-wrap > ul > li.reveal-scroll-hint-item {
+    position: relative;
+    height: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+}
+.itinerary-timeline-wrap > ul > li.reveal-scroll-hint-item:first-child {
+    height: 30px;
+    margin: 0 0 8px;
+    transition: height .35s ease, margin .35s ease;
+}
+.itinerary-timeline-wrap > ul > li.reveal-scroll-hint-item:first-child + li {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+.reveal-scroll-hint {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 27px;
+    width: 34px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    color: var(--front-primary);
+    background: transparent;
+    opacity: .80;
+    cursor: pointer;
+    transform: translateX(-50%);
+    transition: color .35s ease, opacity .35s ease;
+    animation: reveal-scroll-hint 1.8s ease-in-out infinite;
+}
+.reveal-scroll-hint-item:first-child .reveal-scroll-hint { top: 0; }
+.reveal-scroll-hint span {
+    display: block;
+    width: 13px;
+    height: 13px;
+    margin: 0 auto;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+}
+.reveal-scroll-hint:hover { color: var(--front-orange); opacity: .9; }
+.reveal-scroll-hint:focus-visible { outline: 1px dotted currentColor; outline-offset: 3px; }
+.reveal-scroll-hint-item.is-hidden .reveal-scroll-hint {
+    opacity: 0;
+    pointer-events: none;
+    animation: none;
+}
+.reveal-scroll-hint-item:first-child.is-hidden { height: 0; margin-bottom: 0; }
+
+@keyframes reveal-scroll-hint {
+    0%, 100% { transform: translate(-50%, -2px); }
+    50% { transform: translate(-50%, 5px); }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .reveal-up.is-reveal-ready,
     .scroll-up.is-reveal-ready,
@@ -2547,6 +2636,7 @@ body.front-menu-is-open { overflow: hidden; }
         transform: none;
         transition: none;
     }
+    .reveal-scroll-hint { animation: none; }
 }
 
 @media screen and (max-width: 991px) {
