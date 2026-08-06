@@ -19,7 +19,9 @@
             <article class="index-weekly-fact">
                 <p class="index-weekly-fact-kicker">{__weekly_fact_label}</p>
                 <h2>{__weekly_fact_title}</h2>
-                <h3>{__weekly_fact_descriptive}</h3>
+                <!-- IF __weekly_fact_descriptif-->
+                     <h3>{__weekly_fact_descriptif}</h3>
+                <!-- ENDIF __weekly_fact_descriptif-->
                 <div class="index-weekly-fact-text front-rich-text">{__weekly_fact_text}</div>
             </article>
             <!-- ENDIF -->
