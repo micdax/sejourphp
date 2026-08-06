@@ -20,7 +20,7 @@
                 <p class="index-weekly-fact-kicker">{__weekly_fact_label}</p>
                 <h2>{__weekly_fact_title}</h2>
                 <!-- IF __weekly_fact_descriptif-->
-                     <h3>{__weekly_fact_descriptif}</h3>
+                     <h4>{__weekly_fact_descriptif}</h4>
                 <!-- ENDIF __weekly_fact_descriptif-->
                 <div class="index-weekly-fact-text front-rich-text">{__weekly_fact_text}</div>
             </article>
