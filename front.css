@@ -749,7 +749,7 @@ body.front-menu-is-open { overflow: hidden; }
     background: linear-gradient(145deg,var(--front-secondary),#315f64);
 }
 .front-trip-promotion:hover { box-shadow: 0 14px 38px rgba(16,31,70,.18); }
-.front-trip-promotion.has-photo { color: #536164; background: #fff; }
+.front-trip-promotion.has-photo { color: #FFF; background: #4fa5c1; }
 .front-trip-promotion-photo {
     position: relative;
     width: 100%;
@@ -757,7 +757,7 @@ body.front-menu-is-open { overflow: hidden; }
     margin: 0;
     aspect-ratio: 6 / 5;
     overflow: hidden;
-    background: #4fa5c1;
+    background: #FFF;
 }
 .front-trip-promotion-photo img {
     display: block;
