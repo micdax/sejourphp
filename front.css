@@ -932,7 +932,7 @@ body.front-menu-is-open { overflow: hidden; }
 .front-tab-panel[hidden] { display: none !important; }
 .front-tab-panel.is-hidden,
 .detail-section.is-hidden { display: none; }
-.front-rich-text { color: #555f62; font-size: calc(15px * var(--front-reader-scale)); line-height: 1.75; }
+.front-rich-text { color: #FFF; font-size: calc(15px * var(--front-reader-scale)); line-height: 1.75; }
 .front-rich-text:empty:before { content: "—"; }
 .description-characteristics { display: flex; margin: 0 0 18px; flex-wrap: wrap; gap: 8px; }
 .description-characteristics span { display: inline-flex; padding: 8px 12px; align-items: center; gap: 7px; color: var(--front-secondary); background: #dff3f3; font-size: 12px; font-weight: 800; }
