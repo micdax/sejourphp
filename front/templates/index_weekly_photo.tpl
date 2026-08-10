@@ -32,7 +32,7 @@
             </figure>
 
             <!-- IF __weekly_fact_has_article -->
-            <article class="index-weekly-fact" id="saviez-{__weekly_fact_id}">
+            <article class="index-weekly-fact reveal-right reveal-closer" id="saviez-{__weekly_fact_id}">
                 <p class="index-weekly-fact-kicker">{__weekly_fact_label}</p>
                 <h2 class='writer'>{__weekly_fact_title}</h2>
                 <!-- IF __weekly_fact_descriptif-->
