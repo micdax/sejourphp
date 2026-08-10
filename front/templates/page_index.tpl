@@ -24,7 +24,7 @@
                 <div class="container">
                     <div class="index-popular-trips {__popular_trips_class}">
                         <header class="index-section-heading">
-                            <div class="index-section-title front-rich-text">{_populaires_titre}</div>
+                            <div class="index-section-title front-rich-text closer">{_populaires_titre}</div>
                             <a class="index-heading-link" href="{__popular_trips_url}">{_populaires_bouton}</a>
                         </header>
                         <div class="row index-trip-grid">
@@ -69,7 +69,7 @@
             <section class="index-editorial-section index-feedback-section">
                 <div class="container">
                     <header class="index-section-heading">
-                        <div class="index-section-title front-rich-text">{_feedback_titre}</div>
+                        <div class="index-section-title front-rich-text writer">{_feedback_titre}</div>
                         <a class="index-heading-link" href="{__feedback_section_url}">{_feedback_bouton}</a>
                     </header>
                     <div class="index-slider index-text-slider" data-index-slider>
@@ -95,14 +95,14 @@
             <section class="index-editorial-section index-faq-section">
                 <div class="container">
                     <header class="index-section-heading">
-                        <div class="index-section-title front-rich-text">{_faq_titre}</div>
+                        <div class="index-section-title front-rich-text writer">{_faq_titre}</div>
                         <a class="index-heading-link" href="{__faq_section_url}">{_faq_bouton}</a>
                     </header>
                     <div class="index-slider index-text-slider" data-index-slider>
                         <button class="index-slider-arrow is-previous" type="button" data-index-slider-previous aria-label="{__slider_previous_label}">‹</button>
                         <div class="index-text-slider-track" data-index-slider-track>
                             <!-- BEGIN index_faq -->
-                            <article class="index-text-slide index-faq-slide">
+                            <article class="index-text-slide index-faq-slide reveal-closer reveal-up">
                                 <h3><strong>{index_faq.TITRE}</strong> <span class="{index_faq.SOUS_TITRE_CLASS}">{index_faq.SOUS_TITRE}</span></h3>
                                 <div class="front-rich-text {index_faq.DESCRIPTIF_CLASS}">{index_faq.DESCRIPTIF}</div>
                                 <a class="index-text-link" href="{index_faq.URL}">{index_faq.BOUTON}</a>
@@ -117,7 +117,7 @@
             <section class="index-editorial-section index-news-section">
                 <div class="container">
                     <header class="index-section-heading">
-                        <div class="index-section-title front-rich-text">{_news_titre}</div>
+                        <div class="index-section-title front-rich-text writer">{_news_titre}</div>
                         <a class="index-heading-link" href="{__news_section_url}">{_news_bouton}</a>
                     </header>
                     <div class="index-slider" data-index-slider>
