@@ -32,7 +32,7 @@
                         </div>
                     </div>
 
-                    <div class="row index-trip-summary-grid   reveal-closer reveal-up">
+                    <div class="row index-trip-summary-grid   reveal-closer reveal-left">
                         <div class="col-lg-8 col-md-7 d-flex">
                             <article class="index-trip-summary-card index-custom-trip-card">
                                 <div class="index-trip-summary-title front-rich-text">{_pub_alacarte_titre}</div>
@@ -41,7 +41,7 @@
                             </article>
                         </div>
                         <div class="col-lg-4 col-md-5 d-flex">
-                            <article class="index-trip-summary-card   reveal-closer reveal-up">
+                            <article class="index-trip-summary-card   reveal-closer reveal-right">
                                 <h3>{__recent_trips_summary_title}</h3>
                                 {__recent_trips_summary_html}
                                 <a class="index-trip-summary-link" href="{__recent_trips_summary_url}">{__recent_trips_summary_link}</a>
