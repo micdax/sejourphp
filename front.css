@@ -25,6 +25,11 @@ h1, h2, h3, h4, h5, h6,
 body :is(h1,h2,h3,h4,h5,h6) span { font-weight: 400; }
 .front-detail-page { font-size: calc(15px * var(--front-reader-scale)); }
 
+body :is(h1, h2, h3, h4, h5, h6):is(.writer, .write, .__writer)
+:is(.__writer_word, .__writer_char) {
+    font-weight: inherit;
+}
+
 .front-header-note {
     margin: 0;
     color: #fff;
