@@ -124,7 +124,7 @@
                         <button class="index-slider-arrow is-previous" type="button" data-index-slider-previous aria-label="{__slider_previous_label}">‹</button>
                         <div class="index-editorial-grid" data-index-slider-track>
                             <!-- BEGIN index_news -->
-                            <article class="index-editorial-card">
+                            <article class="index-editorial-card reveal-closer reveal-up">
                                 <h3><strong>{index_news.TITRE}</strong> <span class="{index_news.SOUS_TITRE_CLASS}">{index_news.SOUS_TITRE}</span></h3>
                                 <div class="front-rich-text {index_news.DESCRIPTIF_CLASS}">{index_news.DESCRIPTIF}</div>
                                 <a class="button-primary index-card-button" href="{index_news.URL}">{index_news.BOUTON}</a>
