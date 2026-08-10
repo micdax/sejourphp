@@ -41,7 +41,7 @@
                             </article>
                         </div>
                         <div class="col-lg-4 col-md-5 d-flex">
-                            <article class="index-trip-summary-card   reveal-closer reveal-right">
+                            <article class="index-trip-summary-card   reveal-closer reveal-right reveal-droite">
                                 <h3>{__recent_trips_summary_title}</h3>
                                 {__recent_trips_summary_html}
                                 <a class="index-trip-summary-link" href="{__recent_trips_summary_url}">{__recent_trips_summary_link}</a>
