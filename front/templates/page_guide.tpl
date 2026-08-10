@@ -29,7 +29,7 @@
 
     <section class="guide-contents-section {__guide_contents_class}">
         <div class="container">
-            <header class="guide-section-heading writer"><h2>{__guide_contents_title}</h2></header>
+            <header class="guide-section-heading owriter"><h2>{__guide_contents_title}</h2></header>
             <div class="guide-content-cards">{__guide_contents_html}</div>
         </div>
     </section>
