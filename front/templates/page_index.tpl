@@ -5,7 +5,7 @@
                 <div class="container">
                     <div class="index-intro-grid">
                         <div class="index-intro-card front-rich-text reveal-closer reveal-left reveal-gauche">{_intro_1}</div>
-                        <div class="index-intro-card front-rich-text reveal-closer reveal-left reveal-up">{_intro_2}</div>
+                        <div class="index-intro-card front-rich-text reveal-closer reveal-up">{_intro_2}</div>
                         <div class="index-intro-card front-rich-text reveal-closer reveal-right reveal-droite">{_intro_3}</div>
                     </div>
                 </div>
