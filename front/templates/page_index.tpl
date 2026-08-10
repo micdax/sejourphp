@@ -24,7 +24,7 @@
                 <div class="container">
                     <div class="index-popular-trips {__popular_trips_class}">
                         <header class="index-section-heading">
-                            <div class="index-section-title front-rich-text closer">{_populaires_titre}</div>
+                            <div class="index-section-title front-rich-text closer writer">{_populaires_titre}</div>
                             <a class="index-heading-link" href="{__popular_trips_url}">{_populaires_bouton}</a>
                         </header>
                         <div class="row index-trip-grid">
