@@ -727,8 +727,7 @@ body.front-menu-is-open { overflow: hidden; }
     clip-path: polygon(0 76%, 22% 40%, 49% 74%, 76% 32%, 100% 69%, 100% 100%, 0 100%);
 }
 
-/* Les figures du pano di terra servent ici de masque ajouré entre le hero et
-   le blanc de la page : aucun bandeau textile coloré n'est affiché. */
+/* Trame halftone de 80px entre la photo du hero LS et le blanc de la page. */
 .front-list-page .inner-banner-wrap {
     padding-bottom: 40px;
     overflow: hidden;
@@ -736,35 +735,18 @@ body.front-menu-is-open { overflow: hidden; }
 .front-list-page .inner-shape {
     position: relative;
     z-index: 2;
-    height: 126px;
-    margin-top: -82px;
-    overflow: visible;
+    height: 80px;
+    margin-top: -80px;
+    overflow: hidden;
     background: transparent;
     clip-path: none;
     pointer-events: none;
 }
-.front-list-page .inner-shape::before,
-.front-list-page .inner-shape::after {
-    position: absolute;
-    content: "";
-}
 .front-list-page .inner-shape::before {
-    z-index: 2;
-    top: 8px;
-    left: -3%;
-    width: 106%;
-    height: 100px;
-    background: transparent url("pano-edge-mask.svg") 0 0 / 400px 100px repeat-x;
-    transform: rotate(1.4deg);
-    transform-origin: 0 100%;
-}
-.front-list-page .inner-shape::after {
-    z-index: 1;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 58px;
-    background: #fff;
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: transparent url("halftone-edge-mask.svg") 0 0 / 240px 80px repeat-x;
 }
 
 .package-section { padding-bottom: 80px; }
@@ -1306,13 +1288,30 @@ body.front-menu-is-open { overflow: hidden; }
 .guide-intro-text > :last-child { margin-bottom: 0; }
 .guide-intro-text > :last-child::after,
 .island-detail-text > :last-child::after,
-.content-detail-text-body > :last-child::after {
+.content-detail-text-body > :last-child::after,
+#section-description > .front-rich-text > :last-child::after,
+.editorial-faq-content .editorial-list-text > :last-child::after {
     display: inline-block;
     width: 8px;
     height: 8px;
     margin-left: 10px;
     background: var(--front-primary);
     content: "";
+}
+.guide-intro-text:has(.front-text-end-mark) > :last-child::after,
+.island-detail-text:has(.front-text-end-mark) > :last-child::after,
+.content-detail-text-body:has(.front-text-end-mark) > :last-child::after,
+#section-description > .front-rich-text:has(.front-text-end-mark) > :last-child::after,
+.editorial-faq-content .editorial-list-text:has(.front-text-end-mark) > :last-child::after {
+    display: none;
+}
+.front-text-end-mark {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-left: 10px;
+    background: var(--front-primary);
+    vertical-align: baseline;
 }
 .guide-intro-gallery { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-top: 30px; }
 .guide-intro-photo { display: block; overflow: hidden; aspect-ratio: 4 / 3; background: #e7ecec; }
@@ -2751,6 +2750,35 @@ body.front-menu-is-open { overflow: hidden; }
     font-size: calc(16px * var(--front-reader-scale));
     font-weight: 400;
     line-height: 1.65;
+}
+.index-feedback-section {
+    color: #fff;
+    background: #398199;
+}
+.index-feedback-section .index-section-title,
+.index-feedback-section .index-section-title :is(h1,h2,h3,h4,h5,h6),
+.index-feedback-section .index-heading-link,
+.index-feedback-section .index-feedback-meta strong,
+.index-feedback-section .index-text-link { color: #98e6ff; }
+.index-feedback-section .index-feedback-meta,
+.index-feedback-section .index-feedback-description { color: rgba(255,255,255,.9); }
+.index-feedback-section .index-heading-link:hover,
+.index-feedback-section .index-text-link:hover {
+    color: #fff;
+    text-decoration-color: rgba(255,255,255,.72);
+}
+.index-feedback-section .index-slider-arrow {
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+    box-shadow: 0 8px 24px rgba(16,31,70,.18);
+}
+.index-feedback-section .index-slider-arrow:hover {
+    color: #fff;
+    background: rgba(255,255,255,.14);
+}
+.index-feedback-section .index-slider-arrow:focus-visible {
+    box-shadow: 0 0 0 2px var(--front-primary),0 0 0 4px #fff;
 }
 .index-card-button {
     display: inline-flex;
