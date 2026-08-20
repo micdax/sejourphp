@@ -2672,7 +2672,7 @@ position:relative;
 isolation:isolate;
 }
 
-.index-feedback-section .index-text-slide {
+.index-feedback-section .index-text-slide::after {
     position: absolute;
     z-index: -1;
     bottom: -8px;
