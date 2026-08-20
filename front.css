@@ -2677,12 +2677,12 @@ border-bottom:1px solid #2f6c81;
 .index-feedback-section .index-text-slide::after {
     position: absolute;
     z-index: -1;
-    bottom: 0px;
-    left: 6%;
-    width: 94%;
-    height: 22px;
+    bottom: -6px;
+    left: 10%;
+    width: 80%;
+    height: 6px;
     background: #2f6c81;
-    filter: blur(6px);
+    filter: blur(2px);
     content: "";
     pointer-events: none;
 }
