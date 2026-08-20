@@ -2670,6 +2670,7 @@ body.front-menu-is-open { overflow: hidden; }
 .index-feedback-section .index-text-slide {
 position:relative;
 isolation:isolate;
+padding-bottom:20px;
 }
 
 .index-feedback-section .index-text-slide::after {
@@ -2680,8 +2681,8 @@ isolation:isolate;
     width: 80%;
     height: 18px;
     border-radius: 50%;
-    background: rgba(0, 0, 0, .28);
-    filter: blur(12px);
+    background: rgba(0, 0, 0, .20);
+    filter: blur(6px);
     content: "";
     pointer-events: none;
 }
