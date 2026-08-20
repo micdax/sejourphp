@@ -2667,6 +2667,24 @@ body.front-menu-is-open { overflow: hidden; }
     background: transparent;
     scroll-snap-align: start;
 }
+.index-feedback-section .index-text-slide {
+position:relative;
+isolation:isolate;
+}
+
+.index-feedback-section .index-text-slide {
+    position: absolute;
+    z-index: -1;
+    bottom: -8px;
+    left: 10%;
+    width: 80%;
+    height: 18px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .28);
+    filter: blur(12px);
+    content: "";
+    pointer-events: none;
+}
 .index-text-slide h3 {
     margin: 0 0 18px;
     color: var(--front-ink);
